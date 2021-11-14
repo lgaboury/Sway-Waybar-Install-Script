@@ -123,8 +123,8 @@ bindsym $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+x exec nwg-bar -t bar.json
 
-bindsym XF86AudioRaiseVolume exec pamixer --increase 5
-bindsym XF86AudioLowerVolume exec pamixer --decrease 5
+bindsym XF86AudioRaiseVolume exec pamixer --increase 1
+bindsym XF86AudioLowerVolume exec pamixer --decrease 1
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
