@@ -19,6 +19,8 @@ while [ -z $wluri ]; do
     # sleep 1
 done
 
+imageName=$(curl $baseurl"HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-CA" -s | jq '.images[].copyright' --raw-output)
+
 curl "$baseurl$wluri" -s > $wlpath
 
 killall swaybg || true

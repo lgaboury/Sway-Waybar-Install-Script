@@ -80,13 +80,14 @@ input type:touchpad {
 #
 #
 exec $HOME/.config/sway/scripts/get_bing_image.sh
+exec nwg-wrapper -s $HOME/.config/sway/scripts/get_bing_image_name.sh -c $HOME/.config/sway/scripts/get_bing_image_name.css -p right -a end -mb 10 -mr 10
 # exec mako
 exec blueman-applet
 exec nm-applet --indicator
 exec $HOME/.config/sway/scripts/inactive-windows-transparency.py
 # exec xfce4-notifyd
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec google-chrome-stable
+# exec google-chrome-stable
 
 ### Key bindings
 #
