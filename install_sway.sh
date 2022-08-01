@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# to run this script
-# cd in user Downloads folder
-# mkdir usb
-# sudo mount /dev/sda1 ./usb
-# cd Arch
-# ./configure_desktop.sh
-
 clear
 echo "Starting Desktop Configuration..."
 sleep 2
@@ -60,6 +53,7 @@ echo
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cp -R .config/* ~/.config/
+chmod +x ~/.config/sway/scripts/*.sh ~/.config/sway/scripts/*.py ~/.config/waybar/scripts/*.sh ~/.config/waybar/scripts/*.py
 sudo systemctl enable gdm.service
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
