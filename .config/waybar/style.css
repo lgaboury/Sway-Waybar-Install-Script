@@ -84,16 +84,6 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
-#custom-gpu {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
 #mode {
     padding-left: 16px;
     padding-right: 16px;
