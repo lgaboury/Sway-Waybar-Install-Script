@@ -24,7 +24,7 @@ sleep 5
 clear
 echo "Getting fastest mirrors..."
 echo
-sudo cp ~/Downloads/usb/Arch/reflector.conf /etc/xdg/reflector/
+sudo cp reflector.conf /etc/xdg/reflector/
 sudo systemctl start reflector.service
 sleep 2
 
@@ -34,22 +34,22 @@ echo
 sudo pacman -S archlinux-keyring
 sleep 2
 
-#clear
-#echo "Installing YAY..."
-#echo
-#cd ~/Downloads
-#git clone https://aur.archlinux.org/yay.git
-#cd yay
-#makepkg -si
-cd ~/Downloads/usb
-#sleep 2
+clear
+echo "Installing YAY..."
+echo
+cd ~/Downloads
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~/Downloads/SwayWM-Install-Script
+sleep 2
 
 clear
 echo "Installing sway and related applications..."
 echo
-yay -S gdm network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock waybar wofi mako arc-gtk-theme \
+yay -S gdm-plymouth network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako arc-gtk-theme \
        papirus-icon-theme noto-fonts-emoji ttf-inconsolata nautilus file-roller gnome-disk-utility python-i3ipc \
-       python-requests pamixer brightnessctl polkit-gnome imagemagick jq gedit python-pip foot \
+       python-requests pamixer polkit-gnome imagemagick jq gedit python-pip foot dex clight plymouth-git \
        python-nautilus gvfs-smb microsoft-edge-stable nwg-bar nwg-wrapper ttf-nerd-fonts-symbols nautilus-open-any-terminal
 
 sleep 2
@@ -59,19 +59,16 @@ echo "Applying configuration..."
 echo
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
-cp -R ~/Downloads/usb/Arch/.config/* ~/.config/
-cp ~/Downloads/usb/Arch/.bashrc ~/
-cp ~/Downloads/usb/Arch/.bash_profile ~/
-#sudo cp ~/Downloads/usb/Arch/tlp.conf /etc/tlp.conf
-#sudo systemctl restart tlp.service
+cp -R .config/* ~/.config/
 sudo systemctl enable gdm.service
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-
-
-#clear
-#echo "Installation complete, rebooting..."
-#sleep 2
-#reboot
+sudo sed -i 's/HOOKS=(base systemd/HOOKS=(base systemd sd-plymouth/' /mnt/etc/mkinitcpio.conf
+sudo sed -i 's/quiet/quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
+sudo plymouth-set-default-theme -R spinfinity
+clear
+echo "Installation complete, rebooting..."
+sleep 2
+reboot
