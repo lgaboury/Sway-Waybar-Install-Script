@@ -49,7 +49,7 @@ echo "Installing sway and related applications..."
 echo
 yay -S gdm-plymouth network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako arc-gtk-theme \
        papirus-icon-theme noto-fonts-emoji ttf-inconsolata nautilus file-roller gnome-disk-utility python-i3ipc \
-       python-requests pamixer polkit-gnome imagemagick jq gedit python-pip foot dex clight plymouth-git \
+       python-requests pamixer polkit-gnome imagemagick jq gedit python-pip foot dex clight plymouth-git autotiling \
        python-nautilus gvfs-smb microsoft-edge-stable nwg-bar nwg-wrapper ttf-nerd-fonts-symbols nautilus-open-any-terminal
 
 sleep 2
