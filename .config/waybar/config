@@ -59,14 +59,6 @@
         "tooltip": false,
     },
 
-    "custom/gpu": {
-        "format": "{} ",
-        "exec": "$HOME/.config/waybar/scripts/gpu_status.sh",
-        "return-type": "json",
-        "interval": 5,
-        "min-length": 6,
-    },
-
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
