@@ -10,6 +10,7 @@ echo
 sudo sed -i 's/#Color/Color/' /etc/pacman.conf
 sudo sed -i 's/#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 sudo systemctl start reflector.service
+cat /etc/pacman.d/mirrorlist
 sleep 2
 
 clear
@@ -60,6 +61,7 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 sudo sed -i 's/HOOKS=(base systemd/HOOKS=(base systemd sd-plymouth/' /etc/mkinitcpio.conf
 sudo sed -i 's/quiet/quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
 sudo plymouth-set-default-theme -R spinfinity
+sleep 5
 clear
 echo "Installation complete, rebooting..."
 sleep 2
