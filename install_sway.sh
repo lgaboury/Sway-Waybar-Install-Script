@@ -4,19 +4,11 @@ clear
 echo "Starting Desktop Configuration..."
 sleep 2
 
-### Connect to the internet ###
-clear
-echo "Connecting to wifi..."
-echo
-read -p "Enter wifi SSID: " ssid
-read -s -p "Enter passphrase for $ssid: " ssidpass
-echo
-sudo nmcli device wifi connect "$ssid" password "$ssidpass"
-sleep 5
-
 clear
 echo "Getting fastest mirrors..."
 echo
+sudo sed -i 's/#Color/Color/' /etc/pacman.conf
+sudo sed -i 's/#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 sudo systemctl start reflector.service
 sleep 2
 
