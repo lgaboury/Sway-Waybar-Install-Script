@@ -41,13 +41,13 @@ sleep 2
 clear
 echo "Applying configuration..."
 echo
-sudo cat >> /etc/geoclue/geoclue.conf <<EOF
+su -c "cat >> /etc/geoclue/geoclue.conf <<EOF
 
 [clight]
 allowed=true
 system=false
 users=
-EOF
+EOF" root
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cp -R .config/* ~/.config/
