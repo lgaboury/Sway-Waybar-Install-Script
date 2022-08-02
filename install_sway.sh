@@ -17,7 +17,6 @@ sleep 5
 clear
 echo "Getting fastest mirrors..."
 echo
-sudo cp reflector.conf /etc/xdg/reflector/
 sudo systemctl start reflector.service
 sleep 2
 
@@ -41,7 +40,7 @@ clear
 echo "Installing sway and related applications..."
 echo
 yay -S gdm-plymouth network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako arc-gtk-theme \
-       papirus-icon-theme noto-fonts-emoji ttf-inconsolata nautilus file-roller gnome-disk-utility python-i3ipc \
+       papirus-icon-theme noto-fonts-emoji ttf-liberation nautilus file-roller gnome-disk-utility python-i3ipc \
        python-requests pamixer polkit-gnome imagemagick jq gedit python-pip foot dex clight plymouth-git autotiling \
        python-nautilus gvfs-smb microsoft-edge-stable nwg-bar nwg-wrapper ttf-nerd-fonts-symbols nautilus-open-any-terminal
 
@@ -59,7 +58,7 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-sudo sed -i 's/HOOKS=(base systemd/HOOKS=(base systemd sd-plymouth/' /mnt/etc/mkinitcpio.conf
+sudo sed -i 's/HOOKS=(base systemd/HOOKS=(base systemd sd-plymouth/' /etc/mkinitcpio.conf
 sudo sed -i 's/quiet/quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
 sudo plymouth-set-default-theme -R spinfinity
 clear
