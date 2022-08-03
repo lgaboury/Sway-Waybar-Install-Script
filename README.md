@@ -36,4 +36,15 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
 # Main Features  
 ## SWAY configuration  
 ### Wallpaper  
-  Bing Image Of The Day is downloaded and set as wallpaper using swaybg.  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.
+Bing Image Of The Day is downloaded and set as wallpaper using swaybg via script [get_bing_image.sh](https://github.com/lgaboury/SwayWM-Install-Script/blob/master/.config/sway/scripts/get_bing_image.sh).  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.  
+### Applications/Utilities  
+#### Autostarted by sway:
+* [dex](https://github.com/jceb/dex) will launch any applications compliant with XDG Autostart specification.  
+* [network manager applet](https://gitlab.gnome.org/GNOME/network-manager-applet)  
+* [blueman applet](https://github.com/blueman-project/blueman)  
+* [autotiling](https://github.com/nwg-piotr/autotiling)  
+* 
+#### by keybindings:
+* [foot]() (Super+enter)  
+* [Microsoft Edge]() (Super+W)  
+* 
