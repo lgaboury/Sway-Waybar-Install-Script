@@ -42,7 +42,7 @@ The script will install all required packages to ensure that [sway](https://sway
 * [autotiling](https://github.com/nwg-piotr/autotiling)  
 * [get_bing_image.sh](https://github.com/lgaboury/SwayWM-Install-Script/blob/master/.config/sway/scripts/get_bing_image.sh) Bing Image Of The Day is downloaded and set as wallpaper using swaybg.  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.  
 * [polkit-gnome](https://gitlab.gnome.org/Archive/policykit-gnome)  
-* [mako](https://wayland.emersion.fr/mako/) used for notification daemon.  
+* [mako](https://wayland.emersion.fr/mako/) used for notification daemon configured to display notification top-center.  
 #### by keybindings:
 * [foot](https://codeberg.org/dnkl/foot) Wayland terminal emulator (Super+enter)  
 * [wofi](https://hg.sr.ht/~scoopta/wofi) (Super+d)  
