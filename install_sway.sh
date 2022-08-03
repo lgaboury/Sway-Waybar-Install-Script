@@ -36,7 +36,8 @@ echo
 yay -S gdm network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako arc-gtk-theme \
        papirus-icon-theme noto-fonts-emoji ttf-liberation terminus-font nautilus file-roller gnome-disk-utility python-i3ipc \
        python-requests pamixer polkit-gnome imagemagick jq gedit python-pip foot dex clight autotiling checkupdates-aur \
-       python-nautilus gvfs-smb microsoft-edge-stable nwg-bar nwg-wrapper ttf-nerd-fonts-symbols nautilus-open-any-terminal
+       python-nautilus gvfs-smb microsoft-edge-stable nwg-bar nwg-wrapper ttf-nerd-fonts-symbols nautilus-open-any-terminal \
+       grim slurp wl-clipboard
 
 sleep 2
 
