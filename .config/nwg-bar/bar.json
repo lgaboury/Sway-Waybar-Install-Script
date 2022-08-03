@@ -1,7 +1,7 @@
 [
   {
     "label": "Lock",
-    "exec": "swaylock -f -c 000000",
+    "exec": "swaylock -f -i $HOME/.config/sway/wallpapers/lockscreen_wallpaper.jpg",
     "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
   },
   {
