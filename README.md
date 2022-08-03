@@ -15,7 +15,7 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
    ```
    nmcli device wifi connect <SSID> password <password>
    ```
-   Replace ```<SSID>``` with your wifi SSID and ```<password>``` with your password
+   Replace `<SSID>` with your wifi SSID and `<password>` with your password
 3. Clone this repository:  
    ```
    git clone https://github.com/lgaboury/SwayWM-Install-Script.git
@@ -32,4 +32,6 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
    ```
    ./install_sway.sh
    ```
-## Features
+## Main Features  
+* ### Wallpaper  
+  Bing Image Of The Day is downloaded and set as wallpaper using swaybg.  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.
