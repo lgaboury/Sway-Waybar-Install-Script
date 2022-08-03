@@ -12,7 +12,7 @@ The script will install all required packages to ensure that [sway](https://sway
    ```
 2. Connect to the internet.  With my wireless card, I use:
    ```
-   nmcli device wifi connect <SSID> password <password>
+   sudo nmcli device wifi connect <SSID> password <password>
    ```
    Replace `<SSID>` with your wifi SSID and `<password>` with your password
 3. Clone this repository:  
@@ -63,4 +63,5 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
 * sway workspaces
 * sway language
 * keyboard
-
+# Acknowledgement
+I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.
