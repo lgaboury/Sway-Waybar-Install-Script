@@ -3,9 +3,6 @@ The script will install all required packages to ensure that [sway](https://sway
 
 ![2022-08-01T17:00:48,286270604-05:00](https://user-images.githubusercontent.com/50297059/182253406-330ad2f8-2b3f-40b3-86c1-2a2270e2bc19.png)
 
-
-Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
-
 # How to use  
 1. Log into Arch Linux.  User must be a member of the wheel and input groups.  
 2. Go into user's Downloads folder:
@@ -35,16 +32,23 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
    ```
 # Main Features  
 ## SWAY configuration  
-### Wallpaper  
-Bing Image Of The Day is downloaded and set as wallpaper using swaybg via script [get_bing_image.sh](https://github.com/lgaboury/SwayWM-Install-Script/blob/master/.config/sway/scripts/get_bing_image.sh).  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.  
 ### Applications/Utilities  
 #### Autostarted by sway:
+* [swayidle](https://github.com/swaywm/swayidle)  
 * [dex](https://github.com/jceb/dex) will launch any applications compliant with XDG Autostart specification.  
 * [network manager applet](https://gitlab.gnome.org/GNOME/network-manager-applet)  
 * [blueman applet](https://github.com/blueman-project/blueman)  
 * [autotiling](https://github.com/nwg-piotr/autotiling)  
-* 
+* [get_bing_image.sh](https://github.com/lgaboury/SwayWM-Install-Script/blob/master/.config/sway/scripts/get_bing_image.sh) Bing Image Of The Day is downloaded and set as wallpaper using swaybg.  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.  
+* [polkit-gnome](https://gitlab.gnome.org/Archive/policykit-gnome)  
 #### by keybindings:
-* [foot]() (Super+enter)  
-* [Microsoft Edge]() (Super+W)  
+* [foot](https://codeberg.org/dnkl/foot) Wayland terminal emulator (Super+enter)  
+* [Microsoft Edge Stable](https://www.microsoftedgeinsider.com/en-us/download) (Super+W)  
+* 
+## WAYBAR configuration  
+Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git  
+### Modules  
+* sway workspaces
+* sway language
+* keyboard
 * 
