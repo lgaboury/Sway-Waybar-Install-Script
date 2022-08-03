@@ -1,11 +1,12 @@
 # SwayWM-Install-Script
+The script will install all required packages to ensure that [sway](https://swaywm.org/) and [waybar](https://github.com/Alexays/Waybar) configuration work properly out-of-the-box.  
 
 ![2022-08-01T17:00:48,286270604-05:00](https://user-images.githubusercontent.com/50297059/182253406-330ad2f8-2b3f-40b3-86c1-2a2270e2bc19.png)
 
 
 Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
 
-## How to use  
+# How to use  
 1. Log into Arch Linux.  User must be a member of the wheel and input groups.  
 2. Go into user's Downloads folder:
    ```
@@ -32,6 +33,7 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
    ```
    ./install_sway.sh
    ```
-## Main Features  
-* ### Wallpaper  
+# Main Features  
+## SWAY configuration  
+### Wallpaper  
   Bing Image Of The Day is downloaded and set as wallpaper using swaybg.  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.
