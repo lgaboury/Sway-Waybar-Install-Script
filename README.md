@@ -56,9 +56,7 @@ The script will install all required packages to ensure that [sway](https://sway
   * Print:  screenshot of active output.  
   * Shift+Print:  screenshot of active window.  
   * Ctrl+Print:  screenshot of manually selected area.  
-
-
-
+  
 ## WAYBAR configuration  
 Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git  
 ### Modules  
