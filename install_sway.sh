@@ -37,13 +37,14 @@ yay -S sddm sddm-sugar-candy-git network-manager-applet blueman pavucontrol sway
        arc-gtk-theme papirus-icon-theme noto-fonts-emoji ttf-liberation terminus-font nautilus file-roller gnome-disk-utility python-i3ipc \
        python-requests pamixer polkit-gnome imagemagick jq gedit python-pip foot dex clight autotiling checkupdates-aur \
        python-nautilus gvfs-smb microsoft-edge-stable nwg-bar nwg-wrapper ttf-nerd-fonts-symbols nautilus-open-any-terminal \
-       grim slurp wl-clipboard
+       grim slurp wl-clipboard plymouth-git
 
 sleep 2
 
 clear
 echo "Applying configuration..."
 echo
+echo "Configuring geoclue. Enter root password when prompted:"
 su -c "cat >> /etc/geoclue/geoclue.conf <<EOF
 
 [clight]
@@ -51,11 +52,18 @@ allowed=true
 system=false
 users=
 EOF" root
+echo
+echo "Configuring sddm.  Enter root password when prompted:"
+su -c "cat > /etc/sddm/sddm.conf <<EOF
+[theme]
+current=sugar-candy
+EOF" root
+echo
+
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cp -R .config/* ~/.config/
-chmod +x ~/.config/sway/scripts/*.sh ~/.config/sway/scripts/*.py ~/.config/waybar/scripts/*.sh ~/.config/waybar/scripts/*.py
-sudo systemctl enable gdm.service
+sudo systemctl enable sddm-plymouth.service
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
