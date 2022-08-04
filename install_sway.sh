@@ -48,6 +48,7 @@ echo "Configuring plymouth..."
 sudo sed -i 's/HOOKS=(base systemd /HOOKS=(base systemd sd-plymouth /' /etc/mkinitcpio.conf
 sudo plymouth-set-default-theme -R spinfinity
 sudo sed -i 's/quiet/quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
+echo
 echo "Configuring geoclue for clight. Enter root password when prompted:"
 su -c "cat >> /etc/geoclue/geoclue.conf <<EOF
 
@@ -58,12 +59,11 @@ users=
 EOF" root
 echo
 echo "Configuring sddm.  Enter root password when prompted:"
-su -c "cat > /etc/sddm/sddm.conf <<EOF
-[theme]
-current=sugar-candy
+su -c "cat > /etc/sddm.conf <<EOF
+[Theme]
+Current=sugar-candy
 EOF" root
 echo
-
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cp -R .config/* ~/.config/
