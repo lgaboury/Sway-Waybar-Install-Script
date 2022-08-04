@@ -2,7 +2,8 @@
 The script will install all required packages to ensure that [sway](https://swaywm.org/) and [waybar](https://github.com/Alexays/Waybar) configuration work properly out-of-the-box.  
 
 ![2022-08-03T13:25:15,811638319-05:00](https://user-images.githubusercontent.com/50297059/182682027-e45940ed-f2dd-4237-92cb-4a463c3c07fe.png)
-
+![2022-08-03T19:19:55,636265472-05:00](https://user-images.githubusercontent.com/50297059/182737154-d9936b4d-a287-40aa-9f68-8587fffde52f.png)
+![2022-08-03T19:20:38,962201014-05:00](https://user-images.githubusercontent.com/50297059/182737182-567a0bb2-a980-476f-a97e-33597ffaab8e.png)
 
 # How to use  
 1. Log into Arch Linux base system.  User must be a member of the wheel and input groups.  
