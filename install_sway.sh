@@ -44,7 +44,11 @@ sleep 2
 clear
 echo "Applying configuration..."
 echo
-echo "Configuring geoclue. Enter root password when prompted:"
+echo "Configuring plymouth..."
+sudo sed -i 's/HOOKS=(base systemd /HOOKS=(base systemd sd-plymouth /' /etc/mkinitcpio.conf
+sudo plymouth-set-default-theme -R spinfinity
+sudo sed -i 's/quiet/quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
+echo "Configuring geoclue for clight. Enter root password when prompted:"
 su -c "cat >> /etc/geoclue/geoclue.conf <<EOF
 
 [clight]
