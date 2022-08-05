@@ -1,5 +1,4 @@
-# SwayWM-Install-Script
-The script will install all required packages to ensure that [sway](https://swaywm.org/) and [waybar](https://github.com/Alexays/Waybar) configuration work properly out-of-the-box.  
+# SwayWM-Install-Script  
 
 ![2022-08-03T13:25:15,811638319-05:00](https://user-images.githubusercontent.com/50297059/182682027-e45940ed-f2dd-4237-92cb-4a463c3c07fe.png)
 ![2022-08-03T19:19:55,636265472-05:00](https://user-images.githubusercontent.com/50297059/182737154-d9936b4d-a287-40aa-9f68-8587fffde52f.png)
@@ -29,6 +28,14 @@ The script will install all required packages to ensure that [sway](https://sway
    ./install_sway.sh
    ```
 # Main Features  
+## Install script
+The script will install all required packages to ensure the configuration works properly out-of-the-box.  
+### Main components being installed:  
+* [sway](https://swaywm.org/)  
+* [waybar](https://github.com/Alexays/Waybar)  
+* [sddm](https://wiki.archlinux.org/title/SDDM) with [sugar-candy](https://store.kde.org/p/1312658/) theme  
+* [plymouth](https://wiki.archlinux.org/title/Plymouth)  
+* various fonts  
 ## SWAY configuration  
 ### Applications/Utilities  
 #### Autostarted by sway:
