@@ -86,5 +86,7 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
   * warning: white on yellow  
   * critical: blinking white on red, a notification will also be sent  
 * tray  
+  * netowrk manager applet  
+  * blueman applet  
 # Acknowledgement
 I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.
