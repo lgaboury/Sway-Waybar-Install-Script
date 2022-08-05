@@ -24,10 +24,6 @@ The script will install all required packages to ensure that [sway](https://sway
    ```
    cd SwayWM-Install-Script
    ```
-4. Make install script executable:
-   ```
-   chmod +x install_sway.sh
-   ```
 5. Run installation script:  
    ```
    ./install_sway.sh
