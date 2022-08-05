@@ -59,9 +59,9 @@ The script will install all required packages to ensure that [sway](https://sway
 Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git  
 ### Modules  
 * sway workspaces:  
-  * large white number indicate focused workspace  
-  * large grey number indicate workspace(s) with active window  
-  * small grey number indicate persistent workspaces without active window  
+  * large white number indicates focused workspace  
+  * large grey number indicates workspace(s) with active window  
+  * small grey number indicates persistent workspaces without active window  
 * sway language:  
   * L_Shift+R_Shift will switch the keyboard language layout as defined in the sway config file.  The selected languages must have been defined with locale-gen during your Arch Linux installation.  
 * keyboard state:  
