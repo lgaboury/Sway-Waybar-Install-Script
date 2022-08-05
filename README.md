@@ -81,7 +81,7 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
   * left-click will launch Microsoft Edge pointing to your Gmail Inbox  
 * [sway mode](https://github.com/Alexays/Waybar/wiki/Module:-Sway#mode)  
 * [clock](https://github.com/Alexays/Waybar/wiki/Module:-Clock)  
-* custom weather:  
+* custom weather using [wttr.py](https://github.com/unites/bin/blob/main/waybar-wttr.py):  
   * shows current temperature  
   * hover over will show upcoming forecast  
 * [pulseaudio](https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio)  
