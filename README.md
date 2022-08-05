@@ -61,6 +61,7 @@ The script will install all required packages to ensure that [sway](https://sway
 ## WAYBAR configuration  
 Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git  
 ### Modules  
+More details coming soon...
 * sway workspaces
 * sway language
 * keyboard
