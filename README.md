@@ -1,4 +1,4 @@
-# SwayWM-Install-Script  
+# Sway-Waybar-Install-Script  
 
 ![2022-08-03T13:25:15,811638319-05:00](https://user-images.githubusercontent.com/50297059/182682027-e45940ed-f2dd-4237-92cb-4a463c3c07fe.png)
 ![2022-08-03T19:19:55,636265472-05:00](https://user-images.githubusercontent.com/50297059/182737154-d9936b4d-a287-40aa-9f68-8587fffde52f.png)
@@ -17,15 +17,15 @@
    Replace `<SSID>` with your wifi SSID and `<password>` with your password
 3. Clone this repository:  
    ```
-   git clone https://github.com/lgaboury/SwayWM-Install-Script.git
+   git clone https://github.com/lgaboury/Sway-Waybar-Install-Script.git
    ```
-4. Go into SwayWM-Install-Script folder:  
+4. Go into Sway-Waybar-Install-Script folder:  
    ```
-   cd SwayWM-Install-Script
+   cd Sway-Waybar-Install-Script
    ```
 5. Run installation script:  
    ```
-   ./install_sway.sh
+   ./install_sway_waybar.sh
    ```
 # Main Features  
 ## Install script
@@ -90,10 +90,10 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
 * [battery](https://github.com/Alexays/Waybar/wiki/Module:-Battery):  
   * discharging: white on black  
   * charging: white on green  
-  * warning: white on yellow  
+  * warning: black on yellow  
   * critical: blinking white on red, a notification will also be sent  
 * [tray](https://github.com/Alexays/Waybar/wiki/Module:-Tray)  
   * netowrk manager applet  
   * blueman applet  
 # Acknowledgement
-I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.
+I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.  
