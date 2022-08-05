@@ -40,6 +40,7 @@ The script will install all required packages to ensure that [sway](https://sway
 * [get_bing_image.sh](https://github.com/lgaboury/SwayWM-Install-Script/blob/master/.config/sway/scripts/get_bing_image.sh) Bing Image Of The Day is downloaded and set as wallpaper using swaybg.  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.  
 * [polkit-gnome](https://gitlab.gnome.org/Archive/policykit-gnome)  
 * [mako](https://wayland.emersion.fr/mako/) used for notification daemon configured to display notification top-center.  
+* inactive-windows-transparency.py
 #### by keybindings:
 * [foot](https://codeberg.org/dnkl/foot) Wayland terminal emulator (Super+enter)  
 * [wofi](https://hg.sr.ht/~scoopta/wofi) (Super+d)  
@@ -57,9 +58,33 @@ The script will install all required packages to ensure that [sway](https://sway
 ## WAYBAR configuration  
 Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git  
 ### Modules  
-More details coming soon...
-* sway workspaces
-* sway language
-* keyboard
+* sway workspaces:  
+  * large white number indicate focused workspace  
+  * large grey number indicate workspace(s) with active window  
+  * small grey number indicate persistent workspaces without active window  
+* sway language:  
+  * L_Shift+R_Shift will switch the keyboard language layout as defined in the sway config file.  The selected languages must have been defined with locale-gen during your Arch Linux installation.  
+* keyboard state:  
+  * shows Caps Lock status.  
+* pacman:  
+  * shows number of available packages update (including AUR)  
+  * left-click will launch foot terminal emulator with the yay command  
+* custom mail:  
+  * shows number of unread Google mails via checkgmail.py.  Update the script with your actual username and password.  If using two-step verification on your account, obtain an application password.  
+  * left-click will launch Microsoft Edge pointing to your Gmail Inbox  
+* sway mode  
+* clock  
+* custom weather:  
+  * shows current temperature  
+  * hover over will show upcoming forecast  
+* pulseaudio  
+* used mem  
+* backlight  
+* battery:  
+  * discharging: white on black  
+  * charging: white on green  
+  * warning: white on yellow  
+  * critical: blinking white on red, a notification will also be sent  
+* tray  
 # Acknowledgement
 I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.
