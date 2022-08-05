@@ -57,7 +57,7 @@ The script will install all required packages to ensure the configuration works 
 * [nwg-bar](https://github.com/nwg-piotr/nwg-bar) (Super+x).  Presents the user with a choice of Lock, Logout, Reboot and Shutdown.  
 * [pamixer](https://github.com/cdemoulins/pamixer) used to increase, decrease and mute volume.  
 * [pactl](https://www.freedesktop.org/wiki/Software/PulseAudio/) used to mute microphone.  
-* [clight](https://github.com/FedeDP/Clight) used to auto adjust brightness and gamma on OLED display.  Brightness can be manually adjusted via XF86MonBrightnessDown and XF86MonBrightnessUp.  Note: clight uses geoclue to detect user's location for gamma adjustements.  Clight is autostarted via dex.  
+* [clight](https://github.com/FedeDP/Clight) used to auto adjust brightness and gamma on OLED display.  Brightness can be manually adjusted via XF86MonBrightnessDown and XF86MonBrightnessUp.  Note: clight uses [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/-/wikis/home) to detect user's location for gamma adjustements.  Clight is autostarted via dex.  
 * [grim](https://github.com/emersion/grim) grimshot.sh script is used as follows:
   * Print:  screenshot of active output.  
   * Shift+Print:  screenshot of active window.  
