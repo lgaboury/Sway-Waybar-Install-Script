@@ -34,7 +34,7 @@ The script will install all required packages to ensure the configuration works 
 * [sway](https://swaywm.org/)  
 * [waybar](https://github.com/Alexays/Waybar)  
 * [sddm](https://wiki.archlinux.org/title/SDDM) with [sugar-candy](https://store.kde.org/p/1312658/) theme  
-* [plymouth](https://wiki.archlinux.org/title/Plymouth)  
+* [plymouth](https://wiki.archlinux.org/title/Plymouth) using spinfinity as the theme  
 * various fonts  
 ## SWAY configuration  
 ### Applications/Utilities  
