@@ -95,7 +95,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec wofi --show=drun
 
 # Start your browser
-bindsym $mod+w exec microsoft-edge-stable
+bindsym $mod+w exec chromium
 # bindsym $mod+Shift+w exec microsoft-edge-beta --enable-features=UseOzonePlatform --ozone-platform=wayland
 
 # Start your file manager

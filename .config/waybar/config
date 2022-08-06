@@ -54,7 +54,7 @@
         "format": "{} ",
         "exec": "$HOME/.config/waybar/scripts/checkgmail.py",
         "interval": 120,
-        "on-click": "microsoft-edge-stable https://mail.google.com/mail/u/0/#inbox ; pkill -SIGRTMIN+9 waybar",
+        "on-click": "chromium https://mail.google.com/mail/u/0/#inbox ; pkill -SIGRTMIN+9 waybar",
         "signal": 9,
         "tooltip": false,
     },
