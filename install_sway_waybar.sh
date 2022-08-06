@@ -27,7 +27,7 @@ cd ~/Downloads
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-cd ~/Downloads/SwayWM-Install-Script
+cd ~/Downloads/Sway-Waybar-Install-Script
 sleep 2
 
 clear
@@ -66,7 +66,7 @@ EOF" root
 echo
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
-cp -R $HOME/Downloads/Sway-Waybar-Install-Script/.config/* $HOME/.config/
+cp -R .config/* $HOME/.config/
 sudo systemctl enable sddm-plymouth.service
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
