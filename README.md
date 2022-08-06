@@ -51,7 +51,7 @@ The script will install all required packages to ensure the configuration works 
 #### by keybindings:
 * [foot](https://codeberg.org/dnkl/foot) Wayland terminal emulator (Super+enter)  
 * [wofi](https://hg.sr.ht/~scoopta/wofi) (Super+d)  
-* [Microsoft Edge Stable](https://www.microsoftedgeinsider.com/en-us/download) (Super+w)  
+* [Chromium](https://www.chromium.org/Home/) (Super+w)  
 * [nautilus](https://wiki.gnome.org/Apps/Files) (Super+e)  
 * [swaylock](https://github.com/swaywm/swaylock) (Super+Ctrl+l)  
 * [nwg-bar](https://github.com/nwg-piotr/nwg-bar) (Super+x).  Presents the user with a choice of Lock, Logout, Reboot and Shutdown.  
