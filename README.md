@@ -27,18 +27,19 @@
    ```
    ./install_sway_waybar.sh
    ```
+   Note:  Multiple AUR packages are being installed through [YAY](https://github.com/Jguer/yay), so be patient as some of them take a while to build.  
 # Main Features  
-## Install script
+## Install script  
 The script will install all required packages to ensure the configuration works properly out-of-the-box.  
 ### Main components being installed:  
 * [sway](https://swaywm.org/)  
 * [waybar](https://github.com/Alexays/Waybar)  
-* [gdm](https://wiki.gnome.org/Projects/GDM)  
+* [gdm](https://wiki.gnome.org/Projects/GDM) by default will login into an empty GNOME session, ensure to switch to SWAY when logging in the first time.  
 * [plymouth](https://wiki.archlinux.org/title/Plymouth) using spinfinity as the theme  
 * various fonts  
 ## SWAY configuration  
 ### Applications/Utilities  
-#### Autostarted by sway:
+#### Autostarted by sway:  
 * [swayidle](https://github.com/swaywm/swayidle)  
 * [clight](https://github.com/FedeDP/Clight) used to auto adjust brightness and gamma on OLED display. Note: clight uses [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/-/wikis/home) to detect user's location for gamma adjustments.  
 * [network manager applet](https://gitlab.gnome.org/GNOME/network-manager-applet)  
@@ -47,8 +48,8 @@ The script will install all required packages to ensure the configuration works 
 * [get_bing_image.sh](https://github.com/lgaboury/SwayWM-Install-Script/blob/master/.config/sway/scripts/get_bing_image.sh) Bing Image Of The Day is downloaded and set as wallpaper using swaybg.  [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper) is used to show the image information on the bottom right.  
 * [polkit-gnome](https://gitlab.gnome.org/Archive/policykit-gnome)  
 * [mako](https://wayland.emersion.fr/mako/) used as notification daemon configured to display notification top-center.  
-* inactive-windows-transparency.py
-#### by keybindings:
+* inactive-windows-transparency.py  
+#### by keybindings:  
 * [foot](https://codeberg.org/dnkl/foot) Wayland terminal emulator (Super+enter)  
 * [wofi](https://hg.sr.ht/~scoopta/wofi) (Super+d)  
 * [Google Chrome](https://www.google.com/chrome/) (Super+w)  
@@ -61,7 +62,7 @@ The script will install all required packages to ensure the configuration works 
 * [grim](https://github.com/emersion/grim) grimshot.sh script is used as follows:  
   * Print:  screenshot of active output.  
   * Shift+Print:  screenshot of active window.  
-  * Ctrl+Print:  screenshot of manually selected area.
+  * Ctrl+Print:  screenshot of manually selected area.  
 ## WAYBAR configuration  
 Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git  
 ### Modules  
@@ -95,5 +96,5 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
 * [tray](https://github.com/Alexays/Waybar/wiki/Module:-Tray)  
   * netowrk manager applet  
   * blueman applet  
-# Acknowledgement
+# Acknowledgement  
 I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.  
