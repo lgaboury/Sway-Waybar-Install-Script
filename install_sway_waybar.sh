@@ -61,6 +61,7 @@ echo
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cp -R .config/* $HOME/.config/
+sudo cp 09-timezone /etc/NetworkManager/dispatcher.d/
 sudo systemctl enable gdm.service
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
