@@ -127,9 +127,9 @@ bindsym Shift+XF86AudioLowerVolume exec pamixer --default-source -d 1
 bindsym XF86MonBrightnessDown exec busctl --user call org.clight.clight /org/clight/clight org.clight.clight DecBl d 0.1
 bindsym XF86MonBrightnessUp exec busctl --user call org.clight.clight /org/clight/clight org.clight.clight IncBl d 0.1
 
-bindsym Print exec $HOME/.config/sway/scripts/grimshot.sh output
-bindsym Shift+Print exec $HOME/.config/sway/scripts/grimshot.sh active
-bindsym Ctrl+Print exec $HOME/.config/sway/scripts/grimshot.sh area
+bindsym Print exec $HOME/.config/sway/scripts/grimshot.sh save output
+bindsym Shift+Print exec $HOME/.config/sway/scripts/grimshot.sh save active
+bindsym Ctrl+Print exec $HOME/.config/sway/scripts/grimshot.sh save area
 
 #
 # Moving around:
