@@ -33,7 +33,7 @@ sleep 2
 clear
 echo "Installing sway and related applications..."
 echo
-yay -S sddm sddm-sugar-candy-git network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako \
+yay -S gdm-plymouth network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako \
        arc-gtk-theme papirus-icon-theme noto-fonts-emoji ttf-liberation terminus-font nautilus file-roller gnome-disk-utility python-i3ipc \
        python-requests pamixer polkit-gnome imagemagick jq gedit python-pip foot clight geoclue autotiling \
        python-nautilus gvfs-smb chromium nwg-bar nwg-wrapper ttf-nerd-fonts-symbols nautilus-open-any-terminal \
@@ -58,16 +58,10 @@ system=true
 users=
 EOF" root
 echo
-echo "Configuring sddm.  Enter root password when prompted:"
-su -c "cat > /etc/sddm.conf <<EOF
-[Theme]
-Current=sugar-candy
-EOF" root
-echo
 gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cp -R .config/* $HOME/.config/
-sudo systemctl enable sddm-plymouth.service
+sudo systemctl enable gdm.service
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
