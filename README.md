@@ -79,7 +79,7 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
   * left-click will launch foot terminal emulator with the yay command  
 * custom mail:  
   * shows number of unread Google mails via checkgmail.py.  Update the script with your actual username and password.  If using two-step verification on your account, obtain an application password.  
-  * left-click will launch Microsoft Edge pointing to your Gmail Inbox  
+  * left-click will launch Google Chrome pointing to your Gmail Inbox  
 * [sway mode](https://github.com/Alexays/Waybar/wiki/Module:-Sway#mode)  
 * [clock](https://github.com/Alexays/Waybar/wiki/Module:-Clock)  
 * custom weather using [wttr.py](https://github.com/unites/bin/blob/main/waybar-wttr.py):  
