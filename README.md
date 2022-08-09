@@ -34,8 +34,6 @@ The script will install all required packages to ensure the configuration works 
 ### Main components being installed:  
 * [sway](https://swaywm.org/)  
 * [waybar](https://github.com/Alexays/Waybar)  
-* [gdm](https://wiki.gnome.org/Projects/GDM) by default will login into an empty GNOME session, ensure to switch to SWAY when logging in the first time.  
-* [plymouth](https://wiki.archlinux.org/title/Plymouth) using spinfinity as the theme  
 * various fonts  
 ## SWAY configuration  
 ### Applications/Utilities  
