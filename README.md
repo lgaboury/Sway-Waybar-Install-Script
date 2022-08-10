@@ -34,6 +34,8 @@ The script will install all required packages to ensure the configuration works 
 ### Main components being installed:  
 * [sway](https://swaywm.org/)  
 * [waybar](https://github.com/Alexays/Waybar)  
+* [gdm](https://wiki.gnome.org/Projects/GDM) will default to an empty GNOME session, so ensure you switch to SWAY before logging in.  
+* [plymouth](https://www.freedesktop.org/wiki/Software/Plymouth/)
 * various fonts  
 ## SWAY configuration  
 ### Applications/Utilities  
