@@ -19,6 +19,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term foot
+set $gnome-schema org.gnome.desktop.interface
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -79,6 +80,10 @@ exec nm-applet --indicator
 exec $HOME/.config/sway/scripts/inactive-windows-transparency.py
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec autotiling
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Arc-Dark'
+    gsettings set $gnome-schema icon-theme 'Papirus'
+}
 
 ### Key bindings
 #
