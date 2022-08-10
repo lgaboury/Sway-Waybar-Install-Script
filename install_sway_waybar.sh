@@ -33,7 +33,7 @@ sleep 2
 clear
 echo "Installing sway and related applications..."
 echo
-yay -S greetd greetd-gtkgreet network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako \
+yay -S gdm-plymouth network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako \
        arc-gtk-theme papirus-icon-theme noto-fonts-emoji ttf-liberation terminus-font nautilus file-roller \
        gnome-disk-utility python-i3ipc python-requests pamixer polkit-gnome imagemagick jq gedit python-pip \
        foot clight geoclue autotiling python-nautilus gvfs-smb google-chrome nwg-bar nwg-wrapper ttf-nerd-fonts-symbols \
@@ -49,25 +49,6 @@ sudo sed -i 's/HOOKS=(base systemd /HOOKS=(base systemd sd-plymouth /' /etc/mkin
 sudo plymouth-set-default-theme -R spinfinity
 sudo sed -i 's/quiet/quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
 echo
-echo "Configuring greetd. Enter root password when prompted:"
-su -c "cat > /etc/greetd/environments <<EOF
-sway
-bash
-EOF" root
-echo -c "cat > /etc/greetd/sway-config <<EOF
-# `-l` activates layer-shell mode. Notice that `swaymsg exit` will run after gtkgreet.
-exec "gtkgreet -l; swaymsg exit"
-
-bindsym Mod4+shift+e exec swaynag \
--t warning \
--m 'What do you want to do?' \
--b 'Poweroff' 'systemctl poweroff' \
--b 'Reboot' 'systemctl reboot'
-
-include /etc/sway/config.d/*
-EOF" root
-sudo sed -i 's/command = "agreety --cmd $SHELL"/command = "sway --config /etc/greetd/sway-config"/' /etc/greetd/config.toml
-echo
 echo "Configuring geoclue for clight. Enter root password when prompted:"
 su -c "cat >> /etc/geoclue/geoclue.conf <<EOF
 
@@ -77,15 +58,13 @@ system=true
 users=
 EOF" root
 echo
-gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cp -R .config/* $HOME/.config/
 sudo cp 09-timezone /etc/NetworkManager/dispatcher.d/
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-sudo systemctl enable greetd.service
+sudo systemctl enable gdm.service
 sleep 5
 
 clear
