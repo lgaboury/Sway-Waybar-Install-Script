@@ -33,11 +33,11 @@ sleep 2
 clear
 echo "Installing sway and related applications..."
 echo
-yay -S gdm-plymouth network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako \
+yay -S network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako \
        arc-gtk-theme papirus-icon-theme noto-fonts-emoji ttf-liberation terminus-font nautilus file-roller \
        gnome-disk-utility python-i3ipc python-requests pamixer polkit-gnome imagemagick jq gedit python-pip \
        foot clight geoclue autotiling python-nautilus gvfs-smb google-chrome nwg-bar nwg-wrapper ttf-nerd-fonts-symbols \
-       nautilus-open-any-terminal grim slurp wl-clipboard plymouth-git
+       nautilus-open-any-terminal grim slurp wl-clipboard simple-scan
 
 sleep 2
 
