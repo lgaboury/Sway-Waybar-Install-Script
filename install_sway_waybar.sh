@@ -37,17 +37,13 @@ yay -S network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock 
        arc-gtk-theme papirus-icon-theme noto-fonts-emoji ttf-liberation terminus-font nautilus file-roller \
        gnome-disk-utility python-i3ipc python-requests pamixer polkit-gnome imagemagick jq gedit python-pip \
        foot clight geoclue autotiling python-nautilus gvfs-smb google-chrome nwg-bar nwg-wrapper ttf-nerd-fonts-symbols \
-       nautilus-open-any-terminal grim slurp wl-clipboard simple-scan
+       nautilus-open-any-terminal grim slurp wl-clipboard simple-scan libreoffice-still libreoffice-still-en-gb \
+       hunspell hunspell-en_ca hyphen hyphen-en libmythes mythes-en checkupdates-aur
 
 sleep 2
 
 clear
 echo "Applying configuration..."
-echo
-echo "Configuring plymouth..."
-sudo sed -i 's/HOOKS=(base systemd /HOOKS=(base systemd sd-plymouth /' /etc/mkinitcpio.conf
-sudo plymouth-set-default-theme -R spinfinity
-sudo sed -i 's/quiet/quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
 echo
 echo "Configuring geoclue for clight. Enter root password when prompted:"
 su -c "cat >> /etc/geoclue/geoclue.conf <<EOF
@@ -57,14 +53,30 @@ allowed=true
 system=true
 users=
 EOF" root
+sleep 2
+
 echo
+echo "Copying configuration files..."
 cp -R .config/* $HOME/.config/
 sudo cp 09-timezone /etc/NetworkManager/dispatcher.d/
+sleep 2
+
+echo
+echo "Applying gsettings..."
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-sudo systemctl enable gdm.service
+sleep 2
+
+echo
+echo "Configuring .bash_profile to start SWAY after login..."
+cat >> ~/.bash_profile <<EOF
+
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway > /dev/null 2>&1
+fi
+EOF
 sleep 5
 
 clear
