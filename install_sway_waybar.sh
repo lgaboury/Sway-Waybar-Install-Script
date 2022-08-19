@@ -38,7 +38,7 @@ yay -S network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock 
        gnome-disk-utility python-i3ipc python-requests pamixer polkit-gnome imagemagick jq gedit python-pip \
        foot clight geoclue autotiling python-nautilus gvfs-smb google-chrome nwg-bar nwg-wrapper ttf-nerd-fonts-symbols \
        nautilus-open-any-terminal grim slurp wl-clipboard simple-scan libreoffice-still libreoffice-still-en-gb \
-       hunspell hunspell-en_ca hyphen hyphen-en libmythes mythes-en checkupdates-aur
+       hunspell hunspell-en_ca hyphen hyphen-en libmythes mythes-en aurutils
 
 sleep 2
 
