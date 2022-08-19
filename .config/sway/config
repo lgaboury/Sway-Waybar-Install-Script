@@ -106,6 +106,9 @@ bindsym $mod+w exec google-chrome-stable
 # Start your file manager
 bindsym $mod+e exec nautilus
 
+# Start LibreOffice
+bindsym $mod+o exec libreoffice
+
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.
