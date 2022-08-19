@@ -34,8 +34,7 @@ The script will install all required packages to ensure the configuration works 
 ### Main components being installed:  
 * [sway](https://swaywm.org/)  
 * [waybar](https://github.com/Alexays/Waybar)  
-* [gdm](https://wiki.gnome.org/Projects/GDM) will default to an empty GNOME session, so ensure you switch to SWAY before logging in.  
-* [plymouth](https://www.freedesktop.org/wiki/Software/Plymouth/)
+* Modifies .bash_profile to launch SWAY automatically after console login.
 * various fonts  
 ## SWAY configuration  
 ### Applications/Utilities  
@@ -97,4 +96,4 @@ Waybar configuration inspired by https://github.com/jakehamilton/dotfiles.git
   * netowrk manager applet  
   * blueman applet  
 # Acknowledgement  
-I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.  
+I would like to recognize all the smart and talented folks who work tirelessly on Arch Linux, Sway, Waybar and all the other programs and utilities used as part of this installation.
