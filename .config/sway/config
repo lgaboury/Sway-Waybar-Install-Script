@@ -74,7 +74,8 @@ exec swayidle -w \
      timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
      before-sleep 'swaylock -f -c 000000'
 exec_always $HOME/.config/sway/scripts/get_bing_image.sh
-exec clight
+exec /usr/lib/geoclue-2.0/demos/agent
+exec gammastep -m wayland
 exec blueman-applet
 exec nm-applet --indicator
 exec $HOME/.config/sway/scripts/inactive-windows-transparency.py
@@ -132,8 +133,8 @@ bindcode 248 exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym Shift+XF86AudioRaiseVolume exec pamixer --default-source -i 1
 bindsym Shift+XF86AudioLowerVolume exec pamixer --default-source -d 1
 
-bindsym XF86MonBrightnessDown exec busctl --user call org.clight.clight /org/clight/clight org.clight.clight DecBl d 0.1
-bindsym XF86MonBrightnessUp exec busctl --user call org.clight.clight /org/clight/clight org.clight.clight IncBl d 0.1
+bindsym XF86MonBrightnessDown exec brightnessctl -q set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl -q set +5%
 
 bindsym Print exec $HOME/.config/sway/scripts/grimshot.sh save output
 bindsym Shift+Print exec $HOME/.config/sway/scripts/grimshot.sh save active
