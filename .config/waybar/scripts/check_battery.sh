@@ -8,7 +8,14 @@ do
 	perc=$(cat $capacity)
 	bat=$(echo $capacity | cut -d'/' -f5)
 	if [ $perc -le $CRIT ] && [ $stat == "Discharging" ]; then
-		notify-send --urgency=critical "Battery Low" "Current charge of $bat: $perc%"
+		if [ ! -f notified ]; then
+			notify-send --urgency=critical --icon=dialog-warning "Battery Low" "Current charge of $bat: $perc%"
+			touch notified
+		fi
+	else
+		if [ -f notified ]; then
+			rm notified
+		fi
 	fi
 done
 

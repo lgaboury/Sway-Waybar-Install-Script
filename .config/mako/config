@@ -10,6 +10,7 @@ border-color=#285577
 border-radius=5
 font=Liberation Sans 12
 icons=1
+icon-path=/usr/share/icons/Papirus
 max-icon-size=64
 default-timeout=5000
 ignore-timeout=1
