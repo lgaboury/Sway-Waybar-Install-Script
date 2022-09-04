@@ -23,7 +23,7 @@ window#waybar.hidden {
 
 #workspaces button {
     transition: none;
-    color: #7c818c;
+    color: white;
     background: transparent;
     padding: 5px;
     font-size: 18px;
@@ -40,12 +40,12 @@ window#waybar.hidden {
 }
 
 #workspaces button.persistent {
+    color: yellow;
     font-size: 12px;
 }
 
 #workspaces button.focused {
-    color: white;
-    font-size: 18px;
+    color: lightgreen;
 }
 
 #language {
