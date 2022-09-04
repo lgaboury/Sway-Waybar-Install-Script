@@ -48,6 +48,7 @@ echo "Applying configuration..."
 echo
 echo "Copying configuration files..."
 cp -R .config/* $HOME/.config/
+cp .bashrc $HOME/
 sudo cp 09-timezone /etc/NetworkManager/dispatcher.d/
 sudo cp 90-monitor.conf /etc/X11/xorg.conf.d/
 sudo mkdir /etc/sddm.conf.d
