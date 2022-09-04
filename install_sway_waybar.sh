@@ -36,7 +36,7 @@ echo
 yay -S network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock swayimg waybar wofi mako \
        arc-gtk-theme papirus-icon-theme noto-fonts-emoji noto-fonts terminus-font nautilus file-roller \
        gnome-disk-utility python-i3ipc python-requests pamixer polkit-gnome imagemagick jq gedit python-pip \
-       foot gammastep geoclue autotiling python-nautilus gvfs-smb google-chrome nwg-bar nwg-wrapper \
+       foot brightnessctl gammastep geoclue autotiling python-nautilus gvfs-smb google-chrome nwg-bar nwg-wrapper \
        ttf-nerd-fonts-symbols-1000-em nautilus-open-any-terminal grim slurp wl-clipboard simple-scan \
        libreoffice-still libreoffice-still-en-gb hunspell hunspell-en_ca hyphen hyphen-en libmythes \
        mythes-en aurutils sddm sddm-sugar-candy-git
