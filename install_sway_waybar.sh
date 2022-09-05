@@ -55,7 +55,7 @@ sudo mkdir /etc/sddm.conf.d
 sudo cp sddm.conf /etc/sddm.conf.d/
 sudo cp theme.conf /usr/share/sddm/themes/sugar-candy/
 sudo sed -i 's/HOOKS=(base systemd/HOOKS=(base systemd sd-plymouth/' /etc/mkinitcpio.conf
-sudo sed -i 's/rw quiet splash/rw quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
+sudo sed -i 's/rw quiet/rw quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
 sudo plymouth-set-default-theme -R spinfinity
 sleep 2
 
