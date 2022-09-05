@@ -39,7 +39,7 @@ yay -S network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock 
        foot brightnessctl gammastep geoclue autotiling python-nautilus gvfs-smb google-chrome nwg-bar nwg-wrapper \
        ttf-nerd-fonts-symbols-1000-em nautilus-open-any-terminal grim slurp wl-clipboard simple-scan \
        libreoffice-still libreoffice-still-en-gb hunspell hunspell-en_ca hyphen hyphen-en libmythes \
-       mythes-en aurutils sddm sddm-sugar-candy-git
+       mythes-en aurutils sddm sddm-sugar-candy-git plymouth
 
 sleep 2
 
@@ -54,6 +54,9 @@ sudo cp 90-monitor.conf /etc/X11/xorg.conf.d/
 sudo mkdir /etc/sddm.conf.d
 sudo cp sddm.conf /etc/sddm.conf.d/
 sudo cp theme.conf /usr/share/sddm/themes/sugar-candy/
+sudo sed -i 's/HOOKS=(base systemd/HOOKS=(base systemd sd-plymouth/' /etc/mkinitcpio.conf
+sudo sed -i 's/rw quiet splash/rw quiet splash vt.global_cursor_default=0/' /boot/loader/entries/arch.conf
+sudo plymouth-set-default-theme -R spinfinity
 sleep 2
 
 echo
